@@ -1,11 +1,15 @@
 from fastapi import FastAPI
-from app.schemas import QueryRequest, QueryResponse
-from app.services.agent import generate_answer
-from app.services.rag import rag_system
+from .schemas import QueryRequest, QueryResponse
+from .services.agent import generate_answer
+from .services.rag import rag_system
 
 app = FastAPI(title="NusantaraCare RAG API")
 
-@app.post("/api/v1/query", response_model=QueryResponse)
+@app.get("/")
+async def home():
+    return {"APP Name": "Nusantara Care"}
+
+@app.post("/api/v1/ask", response_model=QueryResponse)
 async def query_endpoint(request: QueryRequest):
     user_question = request.question
 

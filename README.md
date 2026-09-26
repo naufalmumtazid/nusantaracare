@@ -45,7 +45,7 @@ PYTHONPATH=. fastapi dev app/main.py
 This is an example of the request
 
 ```Bash
-curl -X POST "http://localhost:8000/api/v1/query" \
+curl -X POST "http://localhost:8000/api/v1/ask" \
      -H "Content-Type: application/json" \
      -d '{
            "question": "Bagaimana prosedur pengajuan cuti tahunan?"
