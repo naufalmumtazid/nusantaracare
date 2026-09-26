@@ -122,7 +122,6 @@ rpds-py==2026.6.3
 safetensors==0.8.0
 scikit-learn==1.9.1
 scipy==1.18.1
-sentence-transformers==6.1.0
 sentry-sdk==2.70.0
 setuptools==84.0.0
 shellingham==1.5.4
