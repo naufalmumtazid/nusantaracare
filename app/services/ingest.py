@@ -1,4 +1,4 @@
-from .services.rag import rag_system
+from .rag import rag_system
 
 if __name__ == "__main__":
     rag_system.index_document(

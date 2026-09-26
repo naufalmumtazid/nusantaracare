@@ -2,11 +2,9 @@ import os
 import chromadb
 import yaml
 from langchain_text_splitters import MarkdownHeaderTextSplitter
-import json
 
 chroma_client = chromadb.PersistentClient(path="./chroma_data")
 collection = chroma_client.get_or_create_collection(name="policies")
-
 
 class RAGPipeline:
 	def __init__(self, collection):

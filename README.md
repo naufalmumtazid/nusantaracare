@@ -27,7 +27,7 @@ Dokumen nonaktif/konflik: The data that contains 1.4 version will be not include
 ## 4. Kesimpulan & Dokumentasi
 NusantaraCare created an internal system where employees or internal staff can ask questions regarding operational guidelines. For the RAG pipeline, I used MarkdownHeaderTextSplitter instead of splitting chunks by character length to avoid cutting off critical document context. The architecture is fairly simple and aligns with the material provided.
 
-Flow:
+Flow:python app/services/ingest.py
 Request -> RAG -> LLM -> Schema -> Output
 
 Before running the application, populate the document data using:
@@ -39,7 +39,7 @@ python app/services/ingest.py
 For local development, run the service using:
 
 ```Bash
-PYTHONPATH=. fastapi dev app/main.py
+python -m uvicorn app.main:app --reload
 ```
 
 This is an example of the request

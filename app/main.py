@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from .schemas import QueryRequest, QueryResponse
+from .schema import QueryRequest, QueryResponse
 from .services.agent import generate_answer
 from .services.rag import rag_system
 
