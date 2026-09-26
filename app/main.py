@@ -1,7 +1,7 @@
 from fastapi import FastAPI
-from .schema import QueryRequest, QueryResponse
-from .services.agent import generate_answer
-from .services.rag import rag_system
+from app.schema import QueryRequest, QueryResponse
+from app.services.agent import generate_answer
+from app.services.rag import rag_system
 
 app = FastAPI(title="NusantaraCare RAG API")
 

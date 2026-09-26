@@ -3,7 +3,7 @@ import os
 import re
 from dotenv import load_dotenv
 from openai import OpenAI
-from ..schema import QueryResponse
+from app.schema import QueryResponse
 
 load_dotenv()
 
